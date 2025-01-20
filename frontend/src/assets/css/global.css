@@ -2,5 +2,11 @@ body{
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
 
+.headerBackground{
+    background-image: url("../img/header.png");
+}
+.buttonBackground{
+    background-image: url("../img/button.png");
 }
