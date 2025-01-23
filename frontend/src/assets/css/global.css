@@ -2,6 +2,10 @@ body{
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
+    background-image: url("../img/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .headerBackground{

@@ -4,10 +4,10 @@ import user2 from "../../assets/img/patient/user2.png";
 import user3 from "../../assets/img/patient/user3.png";
 import doctor from "../../assets/img/doctor.png";
 ---
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-transparent">
     <div class="mx-auto max-w-screen-3xl">
-        <div class="grid md:grid-cols-2 min-h-screen">
-            <div class="headerBackground text-center bg-no-repeat bg-cover lg:p-10 p-5 flex flex-col justify-center items-center">
+        <div class="grid md:grid-cols-2 lg:min-h-screen">
+            <div class="lg:text-center bg-no-repeat bg-cover lg:p-10 p-5 flex flex-col lg:justify-center lg:items-center items-start">
                 <a href="#" class="inline-flex justify-between items-center py-1 px-1 pe-4 text-sm text-red-700 bg-white bg-opacity-50 rounded-full font-bold">
                     <span class="text-xs bg-white rounded-full text-red-700 px-4 py-1.5 me-3 bg-opacity-60">New</span> 
                     <span class="lg:text-sm text-xs font-bold">Best Blood Donors Service</span> 
@@ -23,7 +23,7 @@ import doctor from "../../assets/img/doctor.png";
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                     </svg>
                 </button>
-                <div class="w-full ml-0 gap-2  text-left items-center flex-col flex justify-center">
+                <div class="w-full ml-0 gap-2  text-left lg:items-center lg:justify-center flex-col flex">
                     <p class="font-bold text-white lg:text-2xl">Happy Patient</p>
                     <div class="flex -space-x-4 rtl:space-x-reverse">
                         <img class="w-10 h-10 border-2 border-white rounded-full object-cover" src={user1.src} alt="">
@@ -33,7 +33,7 @@ import doctor from "../../assets/img/doctor.png";
                     </div>                    
                 </div>
             </div>                        
-            <div class="bg-gray-200 items-center justify-center flex relative">
+            <div class="bg-gray-200 items-center justify-center flex relative lg:block hidden">
                 <img src={doctor.src} alt="" class="w-[780px] h-full object-cover z-20">
                 <div class="bg-white bg-opacity-30 rounded-full flex-row lg:gap-5 gap-3 lg:py-10 lg:px-7 py-8 px-5 backdrop-blur-md z-30 h-10 absolute bottom-1 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
                     <div class="videoCall">
