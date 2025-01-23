@@ -10,3 +10,6 @@ body{
 .buttonBackground{
     background-image: url("../img/button.png");
 }
+.loginBackground{
+    background-image: url("../img/login.png");
+}
