@@ -1,0 +1,59 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Navbar from "../../../components/Admin/UI/Navbar.astro";
+import Sidebar from "../../../components/Admin/UI/Sidebar.astro";
+---
+
+<Layout>
+    <Navbar /> 
+    <Sidebar />
+    <div class="lg:p-4 p-2 sm:ml-64">
+        <div class="lg:p-4 p-2 mt-14">
+            <form class="bg-gray-100 p-6 rounded-2xl">
+                <div class="lg:grid lg:grid-cols-2 grid grid-cols-1 lg:gap-5">
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">Nama Checkpoint</label>
+                        <input type="text" id="name" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" placeholder="Nama Checkpoint" required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="address" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">Alamat</label>
+                        <input type="text" id="address" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" placeholder="Alamat" required />
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label for="phone_number" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">Nomor Telepon</label>
+                    <input type="tel" id="phone_number" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" placeholder="Nomor Telepon" required />
+                </div>
+                <div class="lg:grid lg:grid-cols-2 grid grid-cols-1 lg:gap-5">
+                    <div class="mb-5">
+                        <label for="operating_hours" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">Jam Operasional Mulai</label>
+                        <input type="time" id="operating_hours" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" placeholder="08:00 - 17:00" required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="operating_hours" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">Jam Operasional Selesai</label>
+                        <input type="time" id="operating_hours" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" placeholder="08:00 - 17:00" required />
+                    </div>
+                </div>
+                
+                <div class="mb-5">
+                    <label for="link_lokasi" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">
+                        Link Lokasi (Google Maps)
+                    </label>
+                    <input type="url"  id="link_lokasi" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" placeholder="Link Google Maps" required />
+                </div>
+                <div id="map_embed" class="mb-5"></div>                
+                <div class="mb-5">
+                    <label for="is_active" class="block mb-2 text-md font-semibold text-gray-900 dark:text-white">Status</label>
+                    <select id="is_active" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 dark:shadow-xs-light" required>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Simpan Data</button>
+            </form>                       
+        </div>
+    </div>
+</Layout>
+
+<script src="../../../lib/js/Maps.js"></script>
