@@ -1,14 +1,10 @@
 ---
-import { cards } from "../../../lib/ts/Admin/cards";
-
+import type { Card } from "../../../lib/ts/Admin/cards";
+const { icon, label, value } = Astro.props;
 ---
 
-<div class="lg:grid lg:grid-cols-3 flex flex-col gap-5 justify-between">
-  {cards.map((card) => (
-    <div class="p-6 bg-white border-2 border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700">
-      <div set:html={card.icon}></div>
-      <p class="font-semibold text-sm text-gray-500 dark:text-gray-400">{card.label}</p>
-      <h5 class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">{card.value}</h5>
-    </div>
-  ))}
+<div class="p-6 bg-white border-2 border-gray-200 rounded-2xl dark:bg-gray-800 dark:border-gray-700">
+  <div set:html={icon}></div>
+  <p class="font-semibold text-sm text-gray-500 dark:text-gray-400">{label}</p>
+  <h5 class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">{value}</h5>
 </div>

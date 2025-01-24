@@ -3,7 +3,10 @@ import Layout from "../../layouts/Layout.astro"
 import Sidebar from "../../components/Admin/UI/Sidebar.astro";
 import Navbar from "../../components/Admin/UI/Navbar.astro"
 import Card from "../../components/Admin/components/Card.astro";
+import { cards } from "../../data/Admin/card";
 import { tableData } from "../../lib/ts/Admin/tableDonor";
+
+const indexCard = cards.filter((card) => card.file === "index.astro");
 ---
 
 <Layout>
@@ -11,7 +14,11 @@ import { tableData } from "../../lib/ts/Admin/tableDonor";
     <Sidebar />
     <div class="p-4 sm:ml-64">
         <div class="p-4 mt-14">
-            <Card />
+            <div class="lg:grid lg:grid-cols-3 flex flex-col gap-5 justify-between">
+                {indexCard.map((card, index) => (
+                    <Card key={index} icon={card.icon} label={card.label} value={card.value} />
+                ))}
+            </div>
             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
             <div class="relative overflow-x-auto shadow-md rounded-2xl">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
