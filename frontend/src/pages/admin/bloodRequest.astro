@@ -6,7 +6,7 @@ import Card from "../../components/Admin/components/Card.astro";
 import Table from "../../components/Admin/components/tableBloodRequest.astro";
 import { cards } from "../../data/Admin/card";
 
-const checkpointManagement = cards.filter((card) => card.file === "checkpointManagement");
+const bloodRequest = cards.filter((card) => card.file === "bloodRequest");
 ---
 
 <Layout>
@@ -15,7 +15,7 @@ const checkpointManagement = cards.filter((card) => card.file === "checkpointMan
     <div class="lg:p-4 p-2 sm:ml-64">
         <div class="lg:p-4 p-2 mt-14">
             <div class="grid grid-cols-3 lg:gap-5 gap-1 justify-between">    
-                {checkpointManagement.map((card, index) => (
+                {bloodRequest.map((card, index) => (
                     <Card key={index} icon={card.icon} label={card.label} value={card.value} />
                 ))}
             </div>  
