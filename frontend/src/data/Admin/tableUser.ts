@@ -1,31 +1,31 @@
 export const userData = [
     {
         name: "Andi Prasetyo",
-        bloodType: "A+",
+        bloodType: "A",
         phoneNumber: "+62 812-3456-7890",
         status: "Active",
     },
     {
         name: "Budi Santoso",
-        bloodType: "O-",
+        bloodType: "O",
         phoneNumber: "+62 812-9876-5432",
         status: "Active",
     },
     {
         name: "Siti Rahmawati",
-        bloodType: "B+",
+        bloodType: "B",
         phoneNumber: "+62 812-3210-5432",
         status: "Active",
     },
     {
         name: "Rudi Wibowo",
-        bloodType: "AB+",
+        bloodType: "AB",
         phoneNumber: "+62 812-2468-1357",
         status: "Inactive",
     },
     {
         name: "Dewi Lestari",
-        bloodType: "A-",
+        bloodType: "A",
         phoneNumber: "+62 812-6543-2109",
         status: "Active",
     },
