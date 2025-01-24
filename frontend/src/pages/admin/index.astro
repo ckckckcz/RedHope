@@ -4,7 +4,7 @@ import Sidebar from "../../components/Admin/UI/Sidebar.astro";
 import Navbar from "../../components/Admin/UI/Navbar.astro"
 import Card from "../../components/Admin/components/Card.astro";
 import { cards } from "../../data/Admin/card";
-import { tableData } from "../../data/Admin/tableDonor";
+import { donorData } from "../../data/Admin/tableDonor";
 
 const indexCard = cards.filter((card) => card.file === "dashboard");
 ---
@@ -32,7 +32,7 @@ const indexCard = cards.filter((card) => card.file === "dashboard");
                         </tr>
                     </thead>
                     <tbody>
-                        {tableData.map((item, index) => (
+                        {donorData.map((item, index) => (
                         <tr
                             class={`${
                             index % 1  === 0

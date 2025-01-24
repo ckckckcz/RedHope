@@ -1,4 +1,4 @@
-export const tableData = [
+export const donorData = [
     {
         productName: "Apple MacBook Pro 17\"",
         color: "Silver",
