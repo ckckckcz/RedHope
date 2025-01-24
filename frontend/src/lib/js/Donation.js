@@ -13,7 +13,7 @@ const options = {
         {
             name: "Bulan ini",
             data: [1500, 1418, 1456, 1526, 1356, 1256],
-            color: "red",
+            color: "purple",
         },
         {
             name: "Bulan lalu",
